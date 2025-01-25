@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bubble Fever Game</title>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/phaser@3.87.0/dist/phaser.js"></script>
+        <script>
+            var bubbles = 5
+            class MainMenu extends Phaser.Scene {
+                constructor () {
+                    super('MainMenu')
+                }
+                create() {
+                    this.add.text(200,200,"Bubble Fever \n\nby Hilda")
+                }
+            }
+            const config = {
+                type: Phaser.AUTO,
+                width: 600,
+                height: 400,
+                scene: [
+                    new MainMenu()
+                ],
+            }
+            const game = new Phaser.Game(config);
+        </script>
+    </body>
+</html>
